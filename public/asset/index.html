@@ -1,0 +1,1914 @@
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <title>NAPEKU | Jasa Pengiriman Nanas - Distribusi & Ekspor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="jasa pengiriman nanas, logistik nanas, distribusi buah, ekspor nanas, napekulogistik, pengiriman nanas pemalang">
+    <meta name="description" content="NAPEKULOGISTIK – Penyedia jasa pengiriman & distribusi nanas profesional. Melayani pengiriman retail, grosir, dan ekspor nanas dengan sistem logistik terintegrasi.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="lib/animate/animate.min.css">
+    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Tambahan style untuk modal login */
+        .login-modal .modal-content {
+            border-radius: 10px;
+            border: none;
+        }
+        .login-modal .modal-header {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .login-modal .modal-body {
+            padding: 2rem;
+        }
+        .login-modal .form-control {
+            height: 50px;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        .login-modal .btn-login {
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            height: 50px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .login-modal .btn-login:hover {
+            background-color: #0b5ed7;
+        }
+        .login-modal .divider {
+            position: relative;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        .login-modal .divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: #eee;
+            z-index: 1;
+        }
+        .login-modal .divider span {
+            position: relative;
+            z-index: 2;
+            background-color: white;
+            padding: 0 1rem;
+            color: #777;
+        }
+        .login-modal .social-login .btn {
+            height: 50px;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .login-modal .forgot-password {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: 10px;
+        }
+        .dropdown-menu {
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .dropdown-item {
+            padding: 0.5rem 1.5rem;
+        }
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        .dropdown-divider {
+            margin: 0.5rem 0;
+        }
+        .tracking-form {
+            background: rgba(13, 110, 253, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .tracking-status {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+        .tracking-status:before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #0d6efd;
+        }
+        .tracking-status .status-dot {
+            position: absolute;
+            left: 4px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #0d6efd;
+            z-index: 1;
+        }
+        .tracking-status.completed .status-dot {
+            background: #198754;
+        }
+        .tracking-status.active .status-dot {
+            width: 16px;
+            height: 16px;
+            left: 2px;
+            background: #0d6efd;
+            box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Login Modal -->
+    <div class="modal fade login-modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h2 class="text-center mb-4">Masuk ke NAPEKU</h2>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Alamat Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Kata Sandi" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 btn-login">Masuk</button>
+                    </form>
+                    
+                    <div class="divider">
+                        <span>ATAU</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <button class="btn btn-light w-100 d-flex align-items-center justify-content-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" style="width:20px; margin-right:10px;">
+                            Lanjutkan dengan Google
+                        </button>
+                        <button class="btn btn-light w-100 d-flex align-items-center justify-content-center">
+                            <i class="fab fa-facebook-f text-primary me-2"></i>
+                            Lanjutkan dengan Facebook
+                        </button>
+                    </div>
+                    
+                    <div class="forgot-password">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Lupa kata sandi?</a>
+                        <p class="mt-3">Belum punya akun? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Daftar sekarang</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade login-modal" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h2 class="text-center mb-4">Daftar Akun Baru</h2>
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="registerName" placeholder="Nama Lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="registerEmail" placeholder="Alamat Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="registerPassword" placeholder="Kata Sandi" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Konfirmasi Kata Sandi" required>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="registerAgree" required>
+                            <label class="form-check-label" for="registerAgree">Saya setuju dengan <a href="#">Syarat & Ketentuan</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 btn-login">Daftar</button>
+                    </form>
+                    
+                    <div class="divider">
+                        <span>ATAU</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <button class="btn btn-light w-100 d-flex align-items-center justify-content-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" style="width:20px; margin-right:10px;">
+                            Lanjutkan dengan Google
+                        </button>
+                        <button class="btn btn-light w-100 d-flex align-items-center justify-content-center">
+                            <i class="fab fa-facebook-f text-primary me-2"></i>
+                            Lanjutkan dengan Facebook
+                        </button>
+                    </div>
+                    
+                    <div class="forgot-password text-center mt-3">
+                        <p>Sudah punya akun? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Masuk disini</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div class="modal fade login-modal" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h2 class="text-center mb-4">Lupa Kata Sandi</h2>
+                    <p class="text-center mb-4">Masukkan alamat email Anda untuk mengatur ulang kata sandi</p>
+                    <form id="forgotPasswordForm">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="forgotEmail" placeholder="Alamat Email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 btn-login">Kirim Link Reset</button>
+                    </form>
+                    
+                    <div class="forgot-password text-center mt-3">
+                        <p>Ingat kata sandi? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Masuk disini</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
+        <a href="index.html" class="navbar-brand bg-primary d-flex align-items-center px-4 px-lg-5">
+            <h2 class="mb-2 text-white">NAPEKU</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="#beranda" class="nav-item nav-link active">Beranda</a>
+                <a href="#layanan" class="nav-item nav-link">Layanan</a>
+                <a href="#tarif" class="nav-item nav-link">Tarif</a>
+                <a href="#tracking" class="nav-item nav-link">Tracking</a>
+                <a href="#testimoni" class="nav-item nav-link">Testimoni</a>
+                <a href="#kontak" class="nav-item nav-link">Kontak</a>
+                
+                <!-- Login/User Dropdown -->
+                <div class="nav-item dropdown ms-lg-3" id="authDropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="dropdownMenuButton">
+                        <i class="bi bi-person-circle me-1"></i> Akun
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-box-arrow-in-right me-2"></i>Masuk
+                        </a>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            <i class="bi bi-person-plus me-2"></i>Daftar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Beranda Section -->
+        <section id="beranda" class="section-content active-section">
+<!-- Carousel Start -->
+<div class="container-fluid p-0 pb-5">
+    <div class="owl-carousel header-carousel position-relative mb-5">
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="img/carousel-1.jpg" alt="Pengiriman Nanas">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Pengiriman Nanas Terbaik</h5>
+                            <h1 class="display-3 text-white animated slideInDown mb-4">
+                                Dari Pemalang <span class="text-primary">untuk Nusantara</span><br>
+                                Kirim Nanas Tanpa Batas!
+                            </h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">
+                                Layanan pengiriman nanas cepat dan aman langsung dari sumbernya, dengan sistem rantai dingin agar tetap segar sampai tujuan.
+                            </p>
+                            <a href="#layanan" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Lihat Layanan</a>
+                            <a href="#tracking" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Cek Pengiriman</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                    <div class="owl-carousel-item position-relative">
+                        <img class="img-fluid" src="img/carousel-2.jpg" alt="Distribusi Nanas">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                            <div class="container">
+                                <div class="row justify-content-start">
+                                    <div class="col-10 col-lg-8">
+                                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">Distribusi Nasional</h5>
+                                        <h1 class="display-3 text-white animated slideInDown mb-4">Mitra Terbaik <span class="text-primary">Pengiriman Nanas</span> Anda</h1>
+                                        <p class="fs-5 fw-medium text-white mb-4 pb-2">Melayani pengiriman nanas segar ke seluruh Indonesia dengan jaminan kualitas terbaik.</p>
+                                        <a href="#tarif" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Cek Tarif</a>
+                                        <a href="#kontak" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Hubungi Kami</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel End -->
+
+            <!-- About Start -->
+            <div class="container-fluid overflow-hidden py-5 px-lg-0">
+                <div class="container about py-5 px-lg-0">
+                    <div class="row g-5 mx-lg-0">
+                        <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+                            <div class="position-relative h-100">
+                                <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg" style="object-fit: cover;" alt="Tentang NAPEKULOGISTIK">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
+                            <h6 class="text-secondary text-uppercase mb-3">TENTANG KAMI</h6>
+                            <h1 class="mb-4">NAPEKU - Ahlinya Pengiriman Nanas dari Pemalang ke Seluruh Indonesia
+
+</h1>
+                            <p class="mb-5">
+                                Sejak 2010, NAPEKU hadir sebagai solusi logistik nanas terpercaya langsung dari Pemalang.
+Kami menjadi penghubung antara petani, distributor, dan pelaku bisnis di seluruh Indonesia.
+Dengan teknologi rantai dingin modern dan jaringan pengiriman luas, kami memastikan nanas tetap segar, berkualitas, dan tiba tepat waktu ke tempat tujuan Anda.
+NAPEKU bukan sekadar jasa pengiriman — kami adalah mitra pertumbuhan usaha buah lokal.
+                            </p>
+                            <div class="row g-4 mb-5">
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                    <i class="fa fa-truck fa-3x text-primary mb-3"></i>
+                                    <h5>Distribusi Cepat</h5>
+                                    <p class="m-0">Jaringan logistik luas ke seluruh Indonesia dalam 1-3 hari</p>
+                                </div>
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                                    <i class="fa fa-snowflake fa-3x text-primary mb-3"></i>
+                                    <h5>Rantai Dingin</h5>
+                                    <p class="m-0">Sistem pendinginan untuk menjaga kesegaran nanas</p>
+                                </div>
+                            </div>
+                            <a href="#layanan" class="btn btn-primary py-3 px-5">Lihat Layanan Kami</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+
+<!-- NAPEKU dalam Angka Section -->
+<section id="stats" class="section-content py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9f5ff 100%);">
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5 wow fadeIn" data-wow-delay="0.1s">
+                <h6 class="text-primary text-uppercase mb-3">NAPEKU DALAM ANGKA</h6>
+                <h1 class="mb-4">Mengukir Prestasi, Menjaga Kualitas</h1>
+                <p class="lead">Dalam setiap angka, terkandung komitmen kami untuk memberikan yang terbaik</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Statistik 1 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="stats-card bg-white p-4 rounded-4 shadow-sm text-center h-100">
+                        <div class="stats-icon mb-3">
+                            <div class="icon-circle bg-primary-light">
+                                <i class="fas fa-truck fa-2x text-primary"></i>
+                            </div>
+                        </div>
+                        <h2 class="display-4 fw-bold text-primary mb-2" data-toggle="counter-up">2,500</h2>
+                        <h5 class="mb-3">Ton Nanas Terkirim</h5>
+                        <p class="mb-0 small text-muted">Per tahun dengan tingkat kesegaran 98%</p>
+                    </div>
+                </div>
+
+                <!-- Statistik 2 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="stats-card bg-white p-4 rounded-4 shadow-sm text-center h-100">
+                        <div class="stats-icon mb-3">
+                            <div class="icon-circle bg-success-light">
+                                <i class="fas fa-users fa-2x text-success"></i>
+                            </div>
+                        </div>
+                        <h2 class="display-4 fw-bold text-success mb-2" data-toggle="counter-up">350</h2>
+                        <h5 class="mb-3">Mitra Usaha</h5>
+                        <p class="mb-0 small text-muted">Petani dan distributor yang bergabung</p>
+                    </div>
+                </div>
+
+                <!-- Statistik 3 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="stats-card bg-white p-4 rounded-4 shadow-sm text-center h-100">
+                        <div class="stats-icon mb-3">
+                            <div class="icon-circle bg-warning-light">
+                                <i class="fas fa-globe-asia fa-2x text-warning"></i>
+                            </div>
+                        </div>
+                        <h2 class="display-4 fw-bold text-warning mb-2" data-toggle="counter-up">8</h2>
+                        <h5 class="mb-3">Negara Tujuan</h5>
+                        <p class="mb-0 small text-muted">Ekspor nanas kualitas premium</p>
+                    </div>
+                </div>
+
+                <!-- Statistik 4 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="stats-card bg-white p-4 rounded-4 shadow-sm text-center h-100">
+                        <div class="stats-icon mb-3">
+                            <div class="icon-circle bg-info-light">
+                                <i class="fas fa-percentage fa-2x text-info"></i>
+                            </div>
+                        </div>
+                        <h2 class="display-4 fw-bold text-info mb-2" data-toggle="counter-up">97</h2>
+                        <h5 class="mb-3">Kepuasan Pelanggan</h5>
+                        <p class="mb-0 small text-muted">Rating positif dari seluruh transaksi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 wow fadeIn" data-wow-delay="1s">
+                <div class="d-inline-block px-4 py-2 rounded-pill bg-primary text-white">
+                    <i class="fas fa-award me-2"></i> Terpercaya sejak 2010
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Custom CSS untuk bagian statistik */
+.stats-card {
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.stats-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+}
+
+.stats-card:nth-child(2)::before {
+    background: linear-gradient(90deg, #198754, #20c997);
+}
+
+.stats-card:nth-child(3)::before {
+    background: linear-gradient(90deg, #ffc107, #fd7e14);
+}
+
+.stats-card:nth-child(4)::before {
+    background: linear-gradient(90deg, #0dcaf0, #6610f2);
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-primary-light {
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+.bg-success-light {
+    background-color: rgba(25, 135, 84, 0.1);
+}
+
+.bg-warning-light {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.bg-info-light {
+    background-color: rgba(13, 202, 240, 0.1);
+}
+
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+}
+</style>
+
+      <!-- Layanan Pengiriman Pulau Jawa Section -->
+<section id="layanan-jawa" class="section-content bg-light">
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase">LAYANAN KAMI</h6>
+                <h1 class="mb-5">Jaringan Pengiriman di Pulau Jawa</h1>
+                <p class="lead">Melayani pengiriman nanas segar ke seluruh wilayah Jawa dengan jaminan kualitas terbaik</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Layanan 1 -->
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-card bg-white p-4 rounded-4 shadow-sm h-100">
+                        <div class="service-icon mb-4">
+                            <i class="fas fa-truck-fast fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3">Jabodetabek</h4>
+                        <p class="mb-3">Pengiriman cepat ke wilayah Jakarta, Bogor, Depok, Tangerang, Bekasi dengan estimasi 1-2 hari kerja.</p>
+                        <div class="service-features">
+                            <p><i class="fas fa-check-circle text-success me-2"></i> Gratis pendingin</p>
+                            <p><i class="fas fa-check-circle text-success me-2"></i> Tracking real-time</p>
+                            <p><i class="fas fa-check-circle text-success me-2"></i> Jadwal fleksibel</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-top">
+                            <h5 class="text-primary">Mulai Rp 15.000/kg</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layanan 2 -->
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-card bg-white p-4 rounded-4 shadow-sm h-100">
+                        <div class="service-icon mb-4">
+                            <i class="fas fa-map-marked-alt fa-3x text-success"></i>
+                        </div>
+                        <h4 class="mb-3">Jawa Barat</h4>
+                        <p class="mb-3">Cakupan seluruh Jawa Barat termasuk Bandung, Cirebon, Sukabumi dengan estimasi 2-3 hari kerja.</p>
+                        <div class="service-features">
+                            <p><i class="fas fa-check-circle text-success me-2"></i> Sistem rantai dingin</p>
+                            <p><i class="fas fa-check-circle text-success me-2"></i> Asuransi pengiriman</p>
+                            <p><i class="fas fa-check-circle text-success me-2"></i> Laporan harian</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-top">
+                            <h5 class="text-success">Mulai Rp 12.000/kg</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layanan 3 -->
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="service-card bg-white p-4 rounded-4 shadow-sm h-100">
+                        <div class="service-icon mb-4">
+                            <i class="fas fa-mountain fa-3x text-warning"></i>
+                        </div>
+                        <h4 class="mb-3">Jawa Tengah & Timur</h4>
+                        <p class="mb-3">Pengiriman ke Semarang, Surabaya, Malang, Yogyakarta dan sekitarnya dengan estimasi 3-4 hari kerja.</p>
+                        <div class="service-features">
+                            <p><i class="fas fa-check-circle text-success me-2"></i> Pengemasan khusus</p>
+                            <p><i class="fas fa-check-circle text-success me-2"></i> Jadwal rutin mingguan</p>
+                            <p><i class="fas fa-check-circle text-success me-2"></i> Prioritas pengiriman</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-top">
+                            <h5 class="text-warning">Mulai Rp 10.000/kg</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.8s">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                        <h4 class="mb-4"><i class="fas fa-map-marker-alt text-danger me-2"></i> Cakupan Wilayah</h4>
+                        <img src="img/peta-jawa.png" alt="Peta Cakupan Pengiriman Pulau Jawa" class="img-fluid rounded-3 mb-3">
+                        <p class="mb-0">Kami melayani pengiriman ke seluruh kota dan kabupaten di Pulau Jawa dengan jaringan logistik terpadu.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="1s">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                        <h4 class="mb-4"><i class="fas fa-clock text-primary me-2"></i> Jadwal Pengiriman</h4>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead class="bg-primary text-white">
+                                    <tr>
+                                        <th>Rute</th>
+                                        <th>Hari Pengiriman</th>
+                                        <th>Estimasi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Pemalang - Jakarta</td>
+                                        <td>Setiap Hari</td>
+                                        <td>1-2 Hari</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pemalang - Bandung</td>
+                                        <td>Senin, Rabu, Jumat</td>
+                                        <td>2 Hari</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pemalang - Surabaya</td>
+                                        <td>Selasa, Kamis</td>
+                                        <td>3 Hari</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pemalang - Yogyakarta</td>
+                                        <td>Senin, Kamis</td>
+                                        <td>2 Hari</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="mb-0 small text-muted">*Estimasi bisa berubah tergantung kondisi lalu lintas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Custom CSS untuk layanan pengiriman */
+.service-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.service-icon {
+    color: #0d6efd;
+}
+
+.service-features p {
+    margin-bottom: 0.5rem;
+}
+
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead th {
+    border-bottom: none;
+}
+</style>
+
+            <div class="container-xxl py-5">
+                <div class="container py-5">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase">PROSES KAMI</h6>
+                        <h1 class="mb-5">Bagaimana Kami Bekerja</h1>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="service-item text-center pt-3">
+                                <div class="p-4">
+                                    <i class="fa fa-calendar-check fa-3x text-primary mb-4"></i>
+                                    <h5 class="mb-3">Pemesanan</h5>
+                                    <p>Pesan layanan melalui website, WhatsApp, atau telepon</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="service-item text-center pt-3">
+                                <div class="p-4">
+                                    <i class="fa fa-box fa-3x text-primary mb-4"></i>
+                                    <h5 class="mb-3">Penjemputan</h5>
+                                    <p>Tim kami menjemput nanas di lokasi Anda</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="service-item text-center pt-3">
+                                <div class="p-4">
+                                    <i class="fa fa-temperature-low fa-3x text-primary mb-4"></i>
+                                    <h5 class="mb-3">Penyimpanan</h5>
+                                    <p>Nanas disimpan dalam cold storage sebelum dikirim</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="service-item text-center pt-3">
+                                <div class="p-4">
+                                    <i class="fa fa-truck-fast fa-3x text-primary mb-4"></i>
+                                    <h5 class="mb-3">Pengiriman</h5>
+                                    <p>Pengiriman dengan kendaraan berpendingin</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tarif Section -->
+        <section id="tarif" class="section-content">
+            <div class="container-xxl py-5">
+                <div class="container py-5">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase">TARIF PENGIRIMAN</h6>
+                        <h1 class="mb-5">Paket Layanan Kami</h1>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="price-item">
+                                <div class="border-bottom p-4 mb-4">
+                                    <h5 class="text-primary mb-1">Reguler</h5>
+                                    <h1 class="display-5 mb-0">
+                                        <small class="align-top" style="font-size:22px;line-height:45px;">Rp</small>10.000
+                                        <small class="align-bottom" style="font-size:16px;line-height:40px;">/ kg</small>
+                                    </h1>
+                                </div>
+                                <div class="p-4 pt-0">
+                                    <p><i class="fa fa-check text-success me-3"></i>Estimasi 2-4 hari kerja</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Minimal 10 kg</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Pengemasan standar</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Asuransi dasar</p>
+                                    <a class="btn btn-primary w-100 py-2 mt-3" href="#kontak">Pesan Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="price-item">
+                                <div class="border-bottom p-4 mb-4">
+                                    <h5 class="text-primary mb-1">Kilat</h5>
+                                    <h1 class="display-5 mb-0">
+                                        <small class="align-top" style="font-size:22px;line-height:45px;">Rp</small>25.000
+                                        <small class="align-bottom" style="font-size:16px;line-height:40px;">/ kg</small>
+                                    </h1>
+                                </div>
+                                <div class="p-4 pt-0">
+                                    <p><i class="fa fa-check text-success me-3"></i>Estimasi 24 jam</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Minimal 20 kg</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Pengemasan premium</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Asuransi lengkap</p>
+                                    <a class="btn btn-primary w-100 py-2 mt-3" href="#kontak">Pesan Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="price-item">
+                                <div class="border-bottom p-4 mb-4">
+                                    <h5 class="text-primary mb-                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary w-100 py-3">Hitung Biaya</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="alert alert-primary mt-3" role="alert">
+                                            <h5 class="alert-heading">Estimasi Biaya</h5>
+                                            <p class="mb-0">Rp 120.000 - Rp 150.000 (2-3 hari kerja)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Tracking Section -->
+<section id="tracking" class="section-content">
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase mb-3">LACAK PENGIRIMAN</h6>
+                    <h1 class="mb-4">Cek Status Pengiriman Anda</h1>
+                    <p class="mb-5">
+                        Masukkan nomor resi pengiriman Anda untuk memantau status dan lokasi terbaru paket nanas Anda.
+                    </p>
+                    <div class="tracking-form">
+                        <form id="trackingForm">
+                            <div class="form-group mb-4">
+                                <label class="form-label">Nomor Resi</label>
+                                <input type="text" class="form-control" id="resiNumber" placeholder="Contoh: NAPE123456789" required>
+                                <div class="invalid-feedback">Harap masukkan nomor resi yang valid</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 py-3">Lacak Pengiriman</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-light p-5 rounded" id="trackingResult" style="display:none;">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4 class="mb-0">Status Pengiriman</h4>
+                            <span class="badge bg-primary" id="statusBadge">Dalam Proses</span>
+                        </div>
+                        <div id="trackingTimeline">
+                            <!-- Timeline akan diisi oleh JavaScript -->
+                        </div>
+                        <div class="mt-4" id="deliveryInfo">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <h6>Pengirim</h6>
+                                    <p id="senderInfo">-</p>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <h6>Penerima</h6>
+                                    <p id="receiverInfo">-</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Estimasi Tiba</h6>
+                                    <p id="estimatedDelivery">-</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Layanan</h6>
+                                    <p id="serviceType">-</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light p-5 rounded text-center" id="trackingPlaceholder">
+                        <i class="fa fa-box-open fa-3x text-muted mb-3"></i>
+                        <h5>Masukkan nomor resi untuk melacak pengiriman</h5>
+                        <p class="text-muted">Contoh resi: NAPE123456789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript untuk Tracking -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const trackingForm = document.getElementById('trackingForm');
+    const resiInput = document.getElementById('resiNumber');
+    const trackingResult = document.getElementById('trackingResult');
+    const trackingPlaceholder = document.getElementById('trackingPlaceholder');
+    
+    // Data contoh (biasanya dari API/database)
+    const shippingData = {
+        'NAPE123456789': {
+            status: 'Dalam Pengiriman',
+            timeline: [
+                { status: 'Pesanan Diterima', date: '12 Juli 2023, 09:30 WIB', location: 'Gudang NAPEKU Pemalang', completed: true },
+                { status: 'Proses Sortir', date: '12 Juli 2023, 11:15 WIB', location: 'Pusat Distribusi Pemalang', completed: true },
+                { status: 'Dalam Pengiriman', date: '13 Juli 2023, 08:00 WIB', location: 'Menuju Jakarta', completed: true, active: true },
+                { status: 'Terkirim', date: 'Estimasi: 14 Juli 2023', location: 'Jakarta', completed: false }
+            ],
+            sender: 'PT Nanas Segar, Pemalang',
+            receiver: 'Toko Buah Mentari, Jakarta',
+            estimate: '14 Juli 2023',
+            service: 'Pengiriman Reguler (2-3 hari)'
+        },
+        'NAPE987654321': {
+            status: 'Pesanan Diterima',
+            timeline: [
+                { status: 'Pesanan Diterima', date: '15 Juli 2023, 14:20 WIB', location: 'Gudang NAPEKU Pemalang', completed: true, active: true },
+                { status: 'Proses Sortir', date: 'Estimasi: 15 Juli 2023', location: 'Pusat Distribusi', completed: false },
+                { status: 'Dalam Pengiriman', date: 'Estimasi: 16 Juli 2023', location: 'Menuju Bandung', completed: false },
+                { status: 'Terkirim', date: 'Estimasi: 17 Juli 2023', location: 'Bandung', completed: false }
+            ],
+            sender: 'UD Nanas Madu, Pemalang',
+            receiver: 'Restoran Sari Buah, Bandung',
+            estimate: '17 Juli 2023',
+            service: 'Pengiriman Kilat (24 jam)'
+        }
+    };
+
+    trackingForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const resiNumber = resiInput.value.trim().toUpperCase();
+        
+        if (resiNumber in shippingData) {
+            // Tampilkan hasil tracking
+            trackingPlaceholder.style.display = 'none';
+            trackingResult.style.display = 'block';
+            
+            // Update status
+            document.getElementById('statusBadge').textContent = shippingData[resiNumber].status;
+            
+            // Update timeline
+            const timelineContainer = document.getElementById('trackingTimeline');
+            timelineContainer.innerHTML = '';
+            
+            shippingData[resiNumber].timeline.forEach(item => {
+                const statusClass = item.completed ? 'completed' : '';
+                const activeClass = item.active ? 'active' : '';
+                const dotClass = item.completed ? 'completed' : (item.active ? 'active' : '');
+                
+                const statusItem = document.createElement('div');
+                statusItem.className = `tracking-status ${statusClass} ${activeClass}`;
+                statusItem.innerHTML = `
+                    <div class="status-dot ${dotClass}"></div>
+                    <h6 class="mb-1">${item.status}</h6>
+                    <p class="text-muted small mb-2">${item.date}</p>
+                    <p>${item.location}</p>
+                `;
+                timelineContainer.appendChild(statusItem);
+            });
+            
+            // Update info pengiriman
+            document.getElementById('senderInfo').textContent = shippingData[resiNumber].sender;
+            document.getElementById('receiverInfo').textContent = shippingData[resiNumber].receiver;
+            document.getElementById('estimatedDelivery').textContent = shippingData[resiNumber].estimate;
+            document.getElementById('serviceType').textContent = shippingData[resiNumber].service;
+            
+        } else {
+            // Resi tidak ditemukan
+            resiInput.classList.add('is-invalid');
+            trackingPlaceholder.style.display = 'block';
+            trackingResult.style.display = 'none';
+        }
+    });
+    
+    // Reset validasi saat user mulai mengetik
+    resiInput.addEventListener('input', function() {
+        this.classList.remove('is-invalid');
+    });
+});
+</script>
+
+<style>
+/* Tambahkan CSS untuk timeline tracking */
+.tracking-status {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.tracking-status:before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #0d6efd;
+    transition: all 0.3s ease;
+}
+
+.tracking-status.completed:before {
+    background: #198754;
+}
+
+.tracking-status .status-dot {
+    position: absolute;
+    left: 4px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #0d6efd;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.tracking-status.completed .status-dot {
+    background: #198754;
+}
+
+.tracking-status.active .status-dot {
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    background: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.2);
+}
+
+.tracking-status:last-child:before {
+    height: 15px;
+}
+</style>
+
+<!-- Testimoni Section -->
+<section id="testimoni" class="section-content bg-light">
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase">TESTIMONI PELANGGAN</h6>
+                <h1 class="mb-5">Apa Kata Mereka Tentang NAPEKU?</h1>
+                <p class="lead">Dengarkan pengalaman langsung dari pelanggan kami yang puas dengan layanan pengiriman nanas kami.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Testimoni 1 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="testimonial-card bg-white p-4 rounded shadow-sm h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Dian Sastro" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5 class="mb-0">Dian Sastro</h5>
+                                <div class="text-warning mb-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <small>Pemilik Restoran, Jakarta</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Pengiriman nanas selalu tepat waktu dan buah sampai dalam kondisi segar. Pelayanan NAPEKU sangat profesional dan harga kompetitif!"</p>
+                        <div class="testimonial-meta mt-3 pt-3 border-top">
+                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> 15 Juli 2023</small>
+                            <small class="text-muted float-end"><i class="fas fa-shipping-fast me-1"></i> Pengiriman Reguler</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 2 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="testimonial-card bg-white p-4 rounded shadow-sm h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Budi Santoso" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5 class="mb-0">Budi Santoso</h5>
+                                <div class="text-warning mb-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <small>Distributor Buah, Bandung</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Sudah 2 tahun menjadi mitra pengiriman nanas dengan NAPEKU. Kualitas buah selalu terjaga dan layanan customer service yang responsif."</p>
+                        <div class="testimonial-meta mt-3 pt-3 border-top">
+                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> 3 Agustus 2023</small>
+                            <small class="text-muted float-end"><i class="fas fa-shipping-fast me-1"></i> Pengiriman Kilat</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 3 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="testimonial-card bg-white p-4 rounded shadow-sm h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Anita Wijaya" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5 class="mb-0">Anita Wijaya</h5>
+                                <div class="text-warning mb-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <small>Eksportir Buah, Surabaya</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Untuk pengiriman ekspor nanas, NAPEKU adalah pilihan terbaik. Dokumen lengkap dan buah sampai di Singapura dalam kondisi sempurna."</p>
+                        <div class="testimonial-meta mt-3 pt-3 border-top">
+                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> 22 Agustus 2023</small>
+                            <small class="text-muted float-end"><i class="fas fa-shipping-fast me-1"></i> Pengiriman Ekspor</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimoni Carousel untuk Mobile -->
+            <div class="d-lg-none mt-4 wow fadeIn" data-wow-delay="0.8s">
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-card bg-white p-4 rounded shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Dian Sastro" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5 class="mb-0">Dian Sastro</h5>
+                                <div class="text-warning mb-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <small>Pemilik Restoran, Jakarta</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Pengiriman nanas selalu tepat waktu dan buah sampai dalam kondisi segar. Pelayanan NAPEKU sangat profesional dan harga kompetitif!"</p>
+                    </div>
+
+                    <div class="testimonial-card bg-white p-4 rounded shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Budi Santoso" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5 class="mb-0">Budi Santoso</h5>
+                                <div class="text-warning mb-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <small>Distributor Buah, Bandung</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Sudah 2 tahun menjadi mitra pengiriman nanas dengan NAPEKU. Kualitas buah selalu terjaga dan layanan customer service yang responsif."</p>
+                    </div>
+
+                    <div class="testimonial-card bg-white p-4 rounded shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Anita Wijaya" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5 class="mb-0">Anita Wijaya</h5>
+                                <div class="text-warning mb-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <small>Eksportir Buah, Surabaya</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Untuk pengiriman ekspor nanas, NAPEKU adalah pilihan terbaik. Dokumen lengkap dan buah sampai di Singapura dalam kondisi sempurna."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 wow fadeIn" data-wow-delay="1s">
+                <a href="#kontak" class="btn btn-primary px-4 py-2">Bergabung dengan Pelanggan Puas Kami</a>
+                <p class="small text-muted mt-2">100+ pelanggan telah mempercayai pengiriman nanas mereka pada kami</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Custom CSS untuk Testimoni */
+.testimonial-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.testimonial-meta {
+    font-size: 0.85rem;
+}
+
+.owl-carousel .testimonial-card {
+    margin: 0 10px;
+}
+</style>
+
+<script>
+// Inisialisasi carousel testimoni untuk mobile
+$(document).ready(function(){
+    $('.testimonial-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            }
+        }
+    });
+});
+</script>
+
+    <!-- Fitur Unggulan Section -->
+<section id="fitur" class="section-content bg-light">
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase">KEUNGGULAN KAMI</h6>
+                <h1 class="mb-5">Mengapa Memilih NAPEKULOGISTIK?</h1>
+            </div>
+            
+            <div class="accordion" id="fiturAccordion">
+                <!-- Fitur 1 -->
+                <div class="accordion-item wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 bg-primary rounded-circle p-3 me-3">
+                                    <i class="fa fa-snowflake text-white"></i>
+                                </div>
+                                <h5 class="mb-0">Rantai Dingin Terintegrasi</h5>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#fiturAccordion">
+                        <div class="accordion-body">
+                            <p>Sistem pendinginan dari pengambilan hingga pengiriman untuk menjaga kesegaran nanas optimal. Kami menggunakan teknologi terbaru dengan suhu terkontrol antara 10-12°C selama proses distribusi.</p>
+                            <ul>
+                                <li>Cold storage berstandar internasional</li>
+                                <li>Kendaraan berpendingin khusus buah</li>
+                                <li>Monitoring suhu real-time</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fitur 2 -->
+                <div class="accordion-item wow fadeInUp" data-wow-delay="0.3s">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 bg-primary rounded-circle p-3 me-3">
+                                    <i class="fa fa-map-marked-alt text-white"></i>
+                                </div>
+                                <h5 class="mb-0">Jaringan Distribusi Luas</h5>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#fiturAccordion">
+                        <div class="accordion-body">
+                            <p>Melayani pengiriman ke seluruh Indonesia dan 8 negara tujuan ekspor dengan jaringan logistik terpercaya.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Domestik:</h6>
+                                    <ul>
+                                        <li>Jawa, Sumatra, Kalimantan</li>
+                                        <li>Sulawesi, Bali, Nusa Tenggara</li>
+                                        <li>Maluku dan Papua</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Internasional:</h6>
+                                    <ul>
+                                        <li>Singapura, Malaysia</li>
+                                        <li>Timor Leste, Australia</li>
+                                        <li>China, Jepang, Korea Selatan</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fitur 3 -->
+                <div class="accordion-item wow fadeInUp" data-wow-delay="0.5s">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 bg-primary rounded-circle p-3 me-3">
+                                    <i class="fa fa-shield-alt text-white"></i>
+                                </div>
+                                <h5 class="mb-0">Asuransi Pengiriman</h5>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#fiturAccordion">
+                        <div class="accordion-body">
+                            <p>Proteksi maksimal dengan asuransi khusus produk pertanian yang mencakup berbagai risiko selama pengiriman.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Cakupan Asuransi:</h6>
+                                    <ul>
+                                        <li>Kerusakan fisik selama transit</li>
+                                        <li>Kehilangan barang</li>
+                                        <li>Keterlambatan pengiriman</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Keuntungan:</h6>
+                                    <ul>
+                                        <li>Klaim mudah dan cepat</li>
+                                        <li>Diverifikasi dalam 3 hari kerja</li>
+                                        <li>Ganti rugi hingga 100%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fitur 4 -->
+                <div class="accordion-item wow fadeInUp" data-wow-delay="0.7s">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 bg-primary rounded-circle p-3 me-3">
+                                    <i class="fa fa-clock text-white"></i>
+                                </div>
+                                <h5 class="mb-0">Pengiriman Tepat Waktu</h5>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#fiturAccordion">
+                        <div class="accordion-body">
+                            <p>Garansi ketepatan waktu pengiriman dengan sistem tracking real-time dan komitmen waktu yang jelas.</p>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="bg-primary text-white">
+                                        <tr>
+                                            <th>Jenis Layanan</th>
+                                            <th>Estimasi Waktu</th>
+                                            <th>Garansi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Reguler</td>
+                                            <td>2-4 hari kerja</td>
+                                            <td>+1 hari toleransi</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kilat</td>
+                                            <td>24 jam</td>
+                                            <td>+6 jam toleransi</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ekspor</td>
+                                            <td>3-7 hari kerja</td>
+                                            <td>+2 hari toleransi</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fitur 5 -->
+                <div class="accordion-item wow fadeInUp" data-wow-delay="0.9s">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 bg-primary rounded-circle p-3 me-3">
+                                    <i class="fa fa-headset text-white"></i>
+                                </div>
+                                <h5 class="mb-0">Layanan 24/7</h5>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#fiturAccordion">
+                        <div class="accordion-body">
+                            <p>Customer service siap membantu kapan saja melalui berbagai channel dengan respon cepat.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Kontak Kami:</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-phone-alt text-primary me-2"></i> 0819-1047-0281</li>
+                                        <li><i class="fa fa-envelope text-primary me-2"></i> napekupemalang21@gmail.com</li>
+                                        <li><i class="fab fa-whatsapp text-primary me-2"></i> +62 819 1047 0281</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Jam Operasional:</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-calendar-alt text-primary me-2"></i> Senin - Minggu</li>
+                                        <li><i class="fa fa-clock text-primary me-2"></i> 24 Jam Non-Stop</li>
+                                        <li><i class="fa fa-user-clock text-primary me-2"></i> Respon < 15 menit</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Peta dengan Rute -->
+<section id="cakupan-wilayah" class="section-content py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h6 class="text-primary text-uppercase fw-bold">JARINGAN PENGIRIMAN</h6>
+      <h2 class="fw-bold mb-3">Rute Distribusi <span class="text-primary">Nanas NAPEKU</span></h2>
+      <p class="lead">Dari Pemalang ke seluruh Jawa melalui jaringan logistik terintegrasi</p>
+    </div>
+
+    <!-- Peta dengan Garis Rute -->
+    <div class="ratio ratio-16x9 shadow-lg rounded-3 overflow-hidden mb-4">
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1eDl7wFOUC8W4JqY9JqY9JqY9JqY9JqY9&ehbc=2E312F&ll=-7.150975,110.140259&z=7&lines=color:0x0d6efd80|weight:3|-6.8916,109.3826|-6.2088,106.8456|-6.5947,106.7896|-6.9175,107.6191|-6.9667,110.4167|-7.7956,110.3695|-7.2575,112.7521"
+        width="100%"
+        height="500"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy"
+        title="Rute Pengiriman NAPEKU">
+      </iframe>
+    </div>
+
+    <!-- Legenda -->
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="bg-white p-3 rounded-3 shadow-sm">
+          <div class="row text-center">
+            <div class="col-4">
+              <div class="d-flex align-items-center justify-content-center">
+                <div class="me-2" style="width:20px;height:20px;background-color:#0d6efd;border-radius:50%;"></div>
+                <small>Pusat Distribusi</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="d-flex align-items-center justify-content-center">
+                <div class="me-2" style="width:20px;height:3px;background-color:#0d6efd;margin-top:8px;"></div>
+                <small>Rute Pengiriman</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="d-flex align-items-center justify-content-center">
+                <i class="fas fa-city text-warning me-2"></i>
+                <small>Kota Tujuan</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Daftar Rute -->
+    <div class="row mt-5 g-4">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">
+              <i class="fas fa-route me-2"></i>Rute Barat
+            </h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0">
+                Pemalang - Jakarta
+                <span class="badge bg-primary rounded-pill">240 km</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0">
+                Pemalang - Bandung
+                <span class="badge bg-primary rounded-pill">320 km</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">
+              <i class="fas fa-route me-2"></i>Rute Tengah
+            </h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0">
+                Pemalang - Semarang
+                <span class="badge bg-primary rounded-pill">120 km</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0">
+                Pemalang - Yogyakarta
+                <span class="badge bg-primary rounded-pill">200 km</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">
+              <i class="fas fa-route me-2"></i>Rute Timur
+            </h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0">
+                Pemalang - Surabaya
+                <span class="badge bg-primary rounded-pill">380 km</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0">
+                Pemalang - Malang
+                <span class="badge bg-primary rounded-pill">420 km</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="section-content">
+        <div class="container-xxl py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase mb-3">HUBUNGI KAMI</h6>
+                        <h1 class="mb-5">Butuh Informasi Lebih Lanjut?</h1>
+                        <p class="mb-5">Tim NAPEKU siap membantu Anda dengan informasi layanan, tarif, atau kerja sama logistik.</p>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
+                            <div class="ps-4">
+                                <h6>Telepon Kami</h6>
+                                <h3 class="text-primary m-0">+62 285 6543 210</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="bg-light text-center p-5 wow fadeIn" data-wow-delay="0.5s">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control border-0" placeholder="Nama Anda" style="height:55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="email" class="form-control border-0" placeholder="Email Anda" style="height:55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control border-0" placeholder="Nomor HP" style="height:55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <select class="form-select border-0" style="height:55px;">
+                                            <option selected>Jenis Permintaan</option>
+                                            <option value="1">Informasi Layanan</option>
+                                            <option value="2">Kerja Sama Bisnis</option>
+                                            <option value="3">Ekspor</option>
+                                            <option value="4">Lainnya</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control border-0" placeholder="Pesan Anda" rows="4"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Kirim Pesan</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-dark text-light mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row gx-5">
+                    <div class="col-lg-6 py-5">
+                        <div class="py-5">
+                            <h1 class="display-6 text-white mb-4">Kantor Pusat & Gudang</h1>
+                            <p class="mb-4"><i class="fa fa-map-marker-alt me-3"></i>Jl. Mentawai Raya No. 55, Pemalang, Jawa Tengah</p>
+                            <p class="mb-4"><i class="fa fa-phone-alt me-3"></i>081910470281</p>
+                            <p class="mb-4"><i class="fa fa-envelope me-3"></i>napekupemalang21@gmail.com</p>
+                            <div class="d-flex pt-3">
+                                <a class="btn btn-square btn-primary rounded-circle me-2" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle me-2" href="#"><i class="fab fa-whatsapp"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle me-2" href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="h-100">
+                            <iframe class="w-100 h-100" 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.2259747022394!2d109.3825573147732!3d-6.982894794958785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fd5d5b5f5b5f5%3A0x5f5f5f5f5f5f5f5f!2sPemalang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid" 
+                                frameborder="0" style="min-height: 400px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top:6rem;">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Alamat</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Mentawai Raya No. 55, Pemalang, Jawa Tengah</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>081910470281</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>napekupemalang21@gmail.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Layanan</h4>
+                <a class="btn btn-link" href="#layanan">Pengiriman Reguler</a>
+                <a class="btn btn-link" href="#layanan">Pengiriman Kilat</a>
+                <a class="btn btn-link" href="#layanan">Pengiriman Ekspor</a>
+                <a class="btn btn-link" href="#layanan">Cold Storage</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Tautan Cepat</h4>
+                <a class="btn btn-link" href="#tarif">Cek Tarif</a>
+                <a class="btn btn-link" href="#tracking">Lacak Pengiriman</a>
+                <a class="btn btn-link" href="#testimoni">Testimoni</a>
+                <a class="btn btn-link" href="#kontak">Hubungi Kami</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Buletin</h4>
+                <p>Dapatkan info promo dan tips logistik langsung ke email Anda.</p>
+                <div class="position-relative mx-auto" style="max-width:400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Email Anda">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Daftar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">NAPEKU</a>, Hak Cipta Dilindungi.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a class="border-bottom" href="#">Kebijakan Privasi</a> | 
+                    <a class="border-bottom" href="#">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+
+<script>
+    // Simple navigation system for single page application
+    document.addEventListener('DOMContentLoaded', function() {
+        // Hide all sections except the first one
+        const sections = document.querySelectorAll('.section-content');
+        sections.forEach(section => {
+            if(!section.classList.contains('active-section')) {
+                section.style.display = 'none';
+            }
+        });
+
+        // Handle navigation clicks
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Skip for dropdown items
+                if(this.classList.contains('dropdown-toggle')) return;
+                
+                e.preventDefault();
+                
+                // Get target section id
+                const targetId = this.getAttribute('href').substring(1);
+                
+                // Hide all sections
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                    section.classList.remove('active-section');
+                });
+                
+                // Show target section
+                document.getElementById(targetId).style.display = 'block';
+                document.getElementById(targetId).classList.add('active-section');
+                
+                // Update active nav link
+                document.querySelectorAll('nav a').forEach(navLink => {
+                    navLink.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            });
+        });
+
+        // Login form handling
+        const loginForm = document.getElementById('loginForm');
+        if(loginForm) {
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('loginEmail').value;
+                const password = document.getElementById('loginPassword').value;
+                
+                // Simulate login (in a real app, you would send this to a server)
+                if(email && password) {
+                    // Store user data in localStorage
+                    localStorage.setItem('userLoggedIn', 'true');
+                    localStorage.setItem('userEmail', email);
+                    
+                    // Update UI
+                    updateAuthUI();
+                    
+                    // Hide modal
+                    const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+                    modal.hide();
+                    
+                    // Show success message
+                    alert('Login berhasil! Selamat datang kembali.');
+                } else {
+                    alert('Silakan isi email dan password dengan benar.');
+                }
+            });
+        }
+        
+        // Register form handling
+        const registerForm = document.getElementById('registerForm');
+        if(registerForm) {
+            registerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('registerName').value;
+                const email = document.getElementById('registerEmail').value;
+                const password = document.getElementById('registerPassword').value;
+                const confirmPassword = document.getElementById('registerConfirmPassword').value;
+                
+                // Simple validation
+                if(password !== confirmPassword) {
+                    alert('Password dan konfirmasi password tidak cocok!');
+                    return;
+                }
+                
+                if(!document.getElementById('registerAgree').checked) {
+                    alert('Anda harus menyetujui syarat dan ketentuan.');
+                    return;
+                }
+                
+                // Simulate registration (in a real app, you would send this to a server)
+                localStorage.setItem('userLoggedIn', 'true');
+                localStorage.setItem('userEmail', email);
+                localStorage.setItem('userName', name);
+                
+                // Update UI
+                updateAuthUI();
+                
+                // Hide modal
+                const modal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
+                modal.hide();
+                
+                // Show success message
+                alert('Pendaftaran berhasil! Selamat datang di NAPEKULOGISTIK.');
+            });
+        }
+        
+        // Forgot password form
+        const forgotPasswordForm = document.getElementById('forgotPasswordForm');
+        if(forgotPasswordForm) {
+            forgotPasswordForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('forgotEmail').value;
+                
+                if(email) {
+                    // Simulate password reset (in a real app, you would send this to a server)
+                    const modal = bootstrap.Modal.getInstance(document.getElementById('forgotPasswordModal'));
+                    modal.hide();
+                    
+                    alert('Link reset password telah dikirim ke email Anda. Silakan cek inbox Anda.');
+                } else {
+                    alert('Silakan masukkan alamat email Anda.');
+                }
+            });
+        }
+        
+        // Check if user is logged in on page load
+        function updateAuthUI() {
+            const isLoggedIn = localStorage.getItem('userLoggedIn') === 'true';
+            const authDropdown = document.getElementById('authDropdown');
+            
+            if(isLoggedIn) {
+                const userName = localStorage.getItem('userName') || 'Pengguna';
+                const userEmail = localStorage.getItem('userEmail');
+                
+                authDropdown.innerHTML = `
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="dropdownMenuButton">
+                        <img src="https://ui-avatars.com/api/?name=${encodeURIComponent(userName)}&background=0D6EFD&color=fff" alt="User" class="user-avatar">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                        <h6 class="dropdown-header">${userEmail}</h6>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <i class="bi bi-person me-2"></i>Profil Saya
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="bi bi-bag me-2"></i>Pesanan Saya
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="bi bi-heart me-2"></i>Favorit
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" id="logoutBtn">
+                            <i class="bi bi-box-arrow-right me-2"></i>Keluar
+                        </a>
+                    </div>
+                `;
+                
+                // Add logout functionality
+                document.getElementById('logoutBtn')?.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    localStorage.removeItem('userLoggedIn');
+                    localStorage.removeItem('userEmail');
+                    localStorage.removeItem('userName');
+                    updateAuthUI();
+                    window.location.reload();
+                });
+            } else {
+                authDropdown.innerHTML = `
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="dropdownMenuButton">
+                        <i class="bi bi-person-circle me-1"></i> Akun
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-box-arrow-in-right me-2"></i>Masuk
+                        </a>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#registerModal
+
+                        <!-- Fitur Unggulan Section -->
+    <section id="fitur" class="section-content bg-light">
+        <div class="container-xxl py-5">
+            <div class="container py-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase">KEUNGGULAN KAMI</h6>
+                    <h1 class="mb-5">Mengapa Memilih NAPEKULOGISTIK?</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item bg-white p-4 rounded">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 bg-primary rounded-circle p-3">
+                                    <i class="fa fa-snowflake text-white fa-2x"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="mb-0">Rantai Dingin Terintegrasi</h5>
+                                </div>
+                            </div>
+                            <p class="mb-0">Sistem pendinginan dari pengambilan hingga pengiriman untuk menjaga kesegaran nanas optimal</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item bg-white p-4 rounded">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 bg-primary rounded-circle p-3">
+                                    <i class="fa fa-map-marked-alt text-white fa-2x"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="mb-0">Jaringan Luas</h5>
+                                </div>
+                            </div>
+                            <p class="mb-0">Melayani pengiriman ke seluruh Indonesia dan 8 negara tujuan ekspor</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item bg-white p-4 rounded">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 bg-primary rounded-circle p-3">
+                                    <i class="fa fa-shield-alt text-white fa-2x"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="mb-0">Asuransi Pengiriman</h5>
+                                </div>
+                            </div>
+                            <p class="mb-0">Proteksi maksimal dengan asuransi khusus produk
