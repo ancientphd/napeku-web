@@ -13,11 +13,12 @@
 
 ---
 
-## 🍍 Tentang Proyek
+## 🍍 Tentang Project
 
 **Napeku** adalah website logistik yang dibangun untuk memfasilitasi proses **pengiriman nanas** dari petani ke pelanggan dengan sistem yang **cepat, aman, dan transparan**. Dirancang dengan **CodeIgniter 4**, website ini menyederhanakan alur layanan logistik khususnya untuk hasil pertanian.
 
-**Programmer**  : Ancient XD
+**Programmer**  : Ancient XD.
+
 **Client**  : Nauval - Pemalang
 
 https://napeku.my.id/
